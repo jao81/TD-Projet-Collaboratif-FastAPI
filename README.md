@@ -49,7 +49,7 @@ This project demonstrates a simple yet powerful API built using FastAPI for serv
 git clone https://github.com/AlexandruEmil/Data-Science-API-FastAPI-Docker
 ```
 ```
-cd your-repo-name
+cd Data-Science-API-FastAPI-Docker
 ```
 ### Build and run the Docker container:
 ```
