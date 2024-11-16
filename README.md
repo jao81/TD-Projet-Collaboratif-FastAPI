@@ -70,3 +70,7 @@ Technologies Used
 > [!NOTE]
 > The endpoint ```/predict``` is configured for the POST method. \
 > From browser you can use ```RESTer``` extention and use POST method
+
+> [!WARNING]
+>For ```/favicon.ico```, browsers automatically request the ```favicon.ico``` file when accessing a URL.\
+> If you don't have a favicon configured, the server will return a ```404```.
