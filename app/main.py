@@ -19,3 +19,11 @@ def read_root():
 @app.get("/favicon.ico")
 def favicon():
     return ""
+
+@app.get("/hello_miss")
+def say_hello(name: str = "Miss beautifull"):
+    return {"message": f"Hello {name}!"} 	  
+
+@app.get("/Salam")
+def say_hello(name: str = "la vie est belle"):
+    return {"message": f"Hey {name}!"}
