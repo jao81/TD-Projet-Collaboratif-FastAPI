@@ -1,4 +1,4 @@
-ifrom fastapi import FastAPI
+from fastapi import FastAPI
 from pydantic import BaseModel
 from app.utils import predict
 
@@ -19,7 +19,11 @@ def read_root():
 @app.get("/favicon.ico")
 def favicon():
     return ""
-@app.get("/Hello miss")
-def say_hello(name: str = "Miss beautifull")
+
+@app.get("/hello_miss")
+def say_hello(name: str = "Miss beautifull"):
     return {"message": f"Hello {name}!"} 	  
 
+@app.get("/Salam")
+def say_hello(name: str = "la vie est belle"):
+    return {"message": f"Hey {name}!"}
