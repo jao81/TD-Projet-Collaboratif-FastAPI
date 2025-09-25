@@ -7,10 +7,14 @@ app = FastAPI()
 class PredictionRequest(BaseModel):
     features: list[float]
 
+# @app.post("/predict")
+# def predict_endpoint(data: PredictionRequest):
+#     predictions = predict(data.features)
+#     return {"predictions": predictions}
 @app.post("/predict")
-def predict_endpoint(data: PredictionRequest):
-    predictions = predict(data.features)
-    return {"predictions": predictions}
+def predict_endpoint_v1(data: PredictionRequest):
+	predictions = predict(data.features)
+	return {"predictions": predictions}
 
 @app.get("/")
 def read_root():

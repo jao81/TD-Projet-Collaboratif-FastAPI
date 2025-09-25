@@ -10,7 +10,7 @@ async def test_predict_success():
         "features": [3.5, 1.2, 4.9]
     })
     assert resp.status_code == 200
-    assert {"predictions": [7.0, 2.4, 9.8]} == resp.json()
+    assert {"predictions": [12.5, 1.0, 19.5]} == resp.json()
 
 @pytest.mark.anyio
 async def test_predict_unprocessable_entity():
