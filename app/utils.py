@@ -11,3 +11,12 @@ def predict(features):
     """Primiți o listă de caracteristici și returnați predicția."""
     features = np.array(features).reshape(-1, 1)
     return model.predict(features).tolist()
+
+z_train = np.array([3, 5, 7, 9])  # y = 2 * x + 1 
+model_2 = LinearRegression() 
+model_2.fit(X_train, z_train) 
+
+def predictNvModel(features): 
+    """Primiți o listă de caracteristici și returnați predicția.""" 
+    features = np.array(features).reshape(-1, 1) 
+    return model_2.predict(features).tolist() 

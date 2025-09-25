@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from app.utils import predict
+from app.utils import predict, predictNvModel
 
 app = FastAPI()
 
@@ -19,3 +19,8 @@ def read_root():
 @app.get("/favicon.ico")
 def favicon():
     return ""
+
+@app.post("/predictNvModel") 
+def predict_endpoint_v2(data: PredictionRequest): 
+    predictions = predictNvModel(data.features) 
+    return {"predictions": predictions} 
