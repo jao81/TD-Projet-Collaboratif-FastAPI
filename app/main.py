@@ -24,3 +24,9 @@ def favicon():
 def predict_endpoint_v2(data: PredictionRequest): 
     predictions = predictNvModel(data.features) 
     return {"predictions": predictions} 
+
+@app.post("/predictBoth") 
+def predict_both(data: PredictionRequest): 
+    old_preds = predict(data.features) 
+    new_preds = predictNvModel(data.features) 
+    return {"old_model": old_preds, "new_model": new_preds}
